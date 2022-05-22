@@ -1,5 +1,5 @@
 
-const httpError = require("../Model/HttpError");
+import httpError from "../Model/HttpError";
 
 const mockEmployee = [
   {
@@ -14,11 +14,11 @@ const mockEmployee = [
   },
 ];
 
-const getAllEmployee = (req, res, next) => {
+export const getAllEmployee = (req, res, next) => {
   res.json({ mockEmployee });
 };
 
-const employeeById = (req, res, next) => {
+export const employeeById = (req, res, next) => {
   // THIS IS THE WAY THROUGH WHICH WE CAN GOT ALL THE PARAMS FROM URL
   const employeeId = req.params.employeeId;
   console.log(employeeId);
@@ -32,7 +32,7 @@ const employeeById = (req, res, next) => {
   res.json({ empById });
 };
 
-const createEmployee = (req, res, next)=>{
+export const createEmployee = (req, res, next)=>{
     console.log("POST REQUEST CREATED")
     if(!req.body){
         throw new httpError(404, "Something went wrong!");
@@ -47,6 +47,4 @@ const createEmployee = (req, res, next)=>{
 
     res.json({message: "crated successfully"})
 }
-exports.employeeById = employeeById;
-exports.getAllEmployee = getAllEmployee;
-exports.createEmployee = createEmployee;
+
