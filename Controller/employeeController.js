@@ -1,6 +1,6 @@
 
 import httpError from "../Model/HttpError";
-
+import {validationResult} from "express-validator";
 let mockEmployee = [
   {
     empId: 101,
@@ -33,6 +33,10 @@ export const employeeById = (req, res, next) => {
 };
 
 export const createEmployee = (req, res, next)=>{
+    const error = validationResult(req);
+    if(!error.isEmpty()){
+        throw new httpError(404, "Please check input parameters!");
+    }
     if(!req.body){
         throw new httpError(404, "Something went wrong!");
     }
