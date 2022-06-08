@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import URLVideoStreaming from './VideosStreaming/URLVideoStreaming';
-import {MasterPage} from './TypeScriptExample/MasterPage';
-import {NewRegistration} from './StudentRegistration/NewRegistration';
+
 ReactDOM.render(
   <React.StrictMode>
-    <NewRegistration />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
