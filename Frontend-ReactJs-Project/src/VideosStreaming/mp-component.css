@@ -1,0 +1,38 @@
+.azure-mp-container {
+    background: #000;
+    width: 100%;
+    height: 0;
+    display: block;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+  
+  }
+  .amp-controlbaricons-right .amp-audiotracks-control{
+      display: none;
+  }
+  .azure-mp-container > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .vjs-control-bar{
+    background-color: red !important;
+  }
+
+  .btnForword span{
+
+  border-radius: 50%;
+  font-size: 24px;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .btnBackword span {
+    font-size: 24px;
+    border-radius: 50%;
+  }
+  
