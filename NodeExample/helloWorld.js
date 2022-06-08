@@ -1,7 +1,5 @@
 // require - it is used to import any module.
-const fs = require("fs");
-
-
+import fs from "fs";
 
  //create a file and write data inside file
 fs.writeFile("personel-detail.txt", JSON.stringify({name: "Rahul", email: "rahul.pundir@concentrix.com"}), (error)=>{

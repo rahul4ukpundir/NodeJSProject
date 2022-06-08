@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { getAllEmployee, employeeById, createEmployee, updateEmployeeById, deleteEmployeeById } from "../Controller/employeeController";
+import { getAllEmployee, employeeById, createEmployee, updateEmployeeById, deleteEmployeeById }
+ from "../Controller/employeeController";
 import { check } from "express-validator";
 
 const router = Router();
