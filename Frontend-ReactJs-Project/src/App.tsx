@@ -1,14 +1,12 @@
-import React, {RefObject} from 'react';
 import './App.css';
+import Employees from './EmployeeManagement/Employees';
 
+const App =() => {
 
-function App() {;
-  const inputEl = React.useRef(null);
   return (
     <div className="myApp">
-      I am working
+      <Employees />
     </div>
-
   );
  
 }
