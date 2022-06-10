@@ -7,7 +7,8 @@ const app = express();
 // add for handling the requrest body as json format
 app.use(express.json())
 
-// added router with default routers
+// added router with default routers 
+// api/employees - default route for the application, all the route will come after this
 app.use("/api/employee",routes);
 
 // added error handling when particular Route did't found.

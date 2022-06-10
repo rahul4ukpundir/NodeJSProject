@@ -1,7 +1,44 @@
 Mongo DB URL
 https://cloud.mongodb.com/v2/6289d93c9f07f73a23f3a5d1#metrics/replicaSet/62a06eee6e968b29617a36dc/explorer/mydb/employeemodels/find
 
-Credentials
-
+Credentials for Mongo Portal.
 User Name : rahul4uk.pundir@gmail.com
 Password  : Prokarma@2022
+
+/* For running this project */
+ npm install
+ npm start
+
+/* Development Guide */
+Case 1: Nomal flow without any DB interaction
+
+ app.js -> employeeRoutes -> employeeController
+
+ app.js                -> is the initial file for run the application.
+ employeeRoutes.js     -> define all the routes for the employee like "/", "/:employeeId"
+ employeeController.js -> define all the action that will redirect from the particular routes.
+
+Case 2: Flow with Mongo DB using MongoDB Client
+
+ app1.js -> mongodb.js
+
+ app1.js    -> is the intial file for run the application
+ mongodb.js -> is used for establish the connection with MongoDB and holding the some controller action like
+              createNewEmployee,getAllEmployee
+
+
+Case 3: Flow with Mongo DB using Mongooes
+
+ app2.js -> mongooesdb.js
+
+ app2.js       -> is the intial file for run the application
+ mongooesdb.js -> is used for establish the connection with MongoDB and holding the some controller action like
+              createNewEmployee,getAllEmployee
+
+NOTE: To run app1.js or app2.js, just replace app.js or vice-versa into the package.json file.
+
+
+
+
+
+
